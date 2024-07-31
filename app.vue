@@ -35,7 +35,7 @@ onMounted(async () => {
     }
 });
 
-const { toggleTheme, enabled } = useTheme();
+const { toggleTheme } = useTheme();
 </script>
 <template>
     <div class="dark:bg-slate-900">

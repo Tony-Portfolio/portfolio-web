@@ -29,18 +29,20 @@ const { enabled } = useTheme();
         </div>
         <div class="flex justify-between gap-8 p-2 md:flex-row flex-col">
             <div class="basis-6/12 text-gray-800 flex flex-col gap-4">
-                <h3>My Story</h3>
                 <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Aperiam similique ad obcaecati molestiae, quas eius,
-                    nostrum, ut quos quam voluptatem cum nobis cupiditate sunt
-                    ratione! Tempora voluptas itaque vel cupiditate.
+                    Hi there! I'm Raka Okto Ramadhan, a high school graduate
+                    majoring in Software Engineering. I have a passion for web
+                    design and development, and I love building websites that
+                    are both visually stunning and user-friendly.
                 </p>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Fugiat quam harum nulla, numquam aperiam veritatis aliquid
-                    deleniti sit mollitia sed natus assumenda beatae iusto
-                    accusantium quasi ducimus reprehenderit obcaecati! Illum!
+                    I've developed my skills in HTML, CSS, and JavaScript and
+                    enjoy working with frameworks like Tailwind, Bootstrap,
+                    Nuxt.js, and React.js. I'm always up for a challenge and
+                    love learning new things to improve my skills. Creating
+                    user-friendly experiences is what drives me, and I'm excited
+                    to keep growing and contributing to projects that I'm
+                    passionate about.
                 </p>
             </div>
             <div class="basis-6/12 flex flex-col gap-6">

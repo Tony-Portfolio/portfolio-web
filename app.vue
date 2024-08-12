@@ -27,11 +27,8 @@ onMounted(async () => {
             delay: 200,
             duration: 1000,
             distance: "20px",
-            // Add more options as needed
         });
         ScrollReveal.reveal(".section");
-    } else {
-        console.log("kg ad");
     }
 });
 

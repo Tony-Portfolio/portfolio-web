@@ -1,55 +1,76 @@
 <script lang="ts" setup>
 // const { enabled } = useTheme();
 // const { reveal } = useScrollReveal();
-const enabled = false;
 </script>
 
 <template>
-    <section class="section py-12 relative">
-        <div class="flex flex-col md:flex-row items-center justify-between">
-            <div class="text-center md:text-left md:w-1/2">
-                <div class="flex mb-4 gap-2">
-                    <img src="/icon/waving.svg" width="40" />
-                    <h1 class="text-4xl font-bold">Hi There!</h1>
-                </div>
-                <p class="text-lg mb-6">
-                    Welcome to my personal portfolio! I'm passionate about web
-                    development and specialize in creating modern, responsive
-                    websites using the latest technologies. Explore my work and
-                    feel free to get in touch!
-                </p>
-                <UButton
-                    class="inline-block bg-blue-500 text-white py-2 px-4 rounded"
-                >
-                    <a href="/cv.pdf" download>Download CV</a>
-                </UButton>
-            </div>
-            <div class="mt-8 md:mt-0 md:w-1/2 flex justify-center">
+    <div class="relative w-full max-w mx-auto h-[100vh]">
+        <div class="w-full h-full flex justify-center align-center">
+            <!-- Ice Mountain Image -->
+            <img
+                src="/images/mountain.jpg"
+                alt="Cold Ice Mountain"
+                class="w-full h-full object-cover rounded-none filter brightness-50 contrast-110 saturate-50"
+            />
+            <!-- Black Overlay -->
+            <div class="absolute inset-0 bg-black/40"></div>
+        </div>
+        <div
+            class="w-full h-full flex justify-center align-center absolute inset-0"
+        >
+            <div
+                class="flex flex-col justify-center align-center text-center gap-2 text-white"
+            >
                 <img
-                    src="/images/foto.png"
-                    alt="Profile Picture"
-                    class="w-48 h-48 rounded-full shadow-lg object-cover object-top"
+                    src="/images/profile-white.png"
+                    alt="profile picture"
+                    class="h-[220px] w-[220px] object-cover rounded-full mx-auto"
                 />
+                <h2 class="text-4xl font-extrabold">Raka Okto Ramadhan</h2>
+                <p class="font-semibold">
+                    Web developer entushiast & Fullstack developer
+                </p>
+                <div class="mt-8">
+                    <a href="#about" class="inline-block">
+                        <!-- Outer Box -->
+                        <div
+                            class="relative w-8 h-16 rounded-full border-2 border-gray-400 flex items-center justify-center overflow-hidden"
+                        >
+                            <!-- Moving Dot -->
+                            <div
+                                class="w-3 h-3 bg-white rounded-full absolute animate-scroll-dot"
+                            ></div>
+                        </div>
+                    </a>
+                    <p>scroll down</p>
+                </div>
             </div>
         </div>
-        <!-- <div class="absolute bottom-4 w-full text-center">
-            <a href="#next-section" class="text-gray-600 hover:text-gray-800">
-                <svg
-                    class="w-6 h-6 mx-auto animate-bounce"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M19 9l-7 7-7-7"
-                    ></path>
-                </svg>
-                <span class="mt-2 block">Scroll Down</span>
-            </a>
-        </div> -->
-    </section>
+    </div>
 </template>
+<style>
+@keyframes scroll-dot {
+    0% {
+        transform: translateY(-80%);
+    }
+    20% {
+        transform: translateY(-20%);
+    }
+    40% {
+        transform: translateY(-60%);
+    }
+    60% {
+        transform: translateY(40%);
+    }
+    80% {
+        transform: translateY(80%);
+    }
+    100% {
+        transform: translateY(-80%);
+    }
+}
+
+.animate-scroll-dot {
+    animation: scroll-dot 2s ease-in-out infinite;
+}
+</style>

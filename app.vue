@@ -18,28 +18,66 @@ useHead({
     }`,
         },
     ],
+    title: "Raka Okto Ramadhan",
+    meta: [
+        {
+            property: "og:title",
+            content: "Raka Okto Ramadhan - Fullstack Developer",
+        },
+        { property: "og:type", content: "website" },
+        { property: "og:url", content: "https://your-portfolio.com" },
+        {
+            property: "og:image",
+            content: "/images/profile-white.png",
+        },
+        {
+            property: "og:image:alt",
+            content: "Preview of Raka Okto Ramadhan's Portfolio",
+        },
+        {
+            property: "og:description",
+            content:
+                "Hi, I'm Raka Okto Ramadhan! I'm a web developer passionate about building scalable, high-performance applications with a strong focus on clean code and user experience.",
+        },
+        { property: "og:site_name", content: "Raka's Portfolio" },
+        { property: "og:locale", content: "en_US" },
+        { name: "twitter:card", content: "summary_large_image" },
+        {
+            name: "twitter:title",
+            content: "Raka Okto Ramadhan - Frontend Developer",
+        },
+        {
+            name: "twitter:description",
+            content:
+                "I'm Raka Okto Ramadhan, a Frontend Developer specializing in Nuxt.js, Vue.js, and modern web technologies.",
+        },
+        {
+            name: "twitter:image",
+            content: "https://your-portfolio.com/images/og-image.jpg",
+        },
+        {
+            name: "twitter:image:alt",
+            content: "Preview of Raka Okto Ramadhan's Portfolio",
+        },
+        { name: "twitter:site", content: "@YourTwitterHandle" },
+    ],
 });
 
-onMounted(async () => {
-    const ScrollReveal = await useScrollReveal();
-    if (ScrollReveal) {
-        ScrollReveal.reveal(".header", {
-            delay: 200,
-            duration: 1000,
-            distance: "20px",
-        });
-        ScrollReveal.reveal(".section");
-    }
-});
-
-const { toggleTheme } = useTheme();
+const { toggleTheme, enabled } = useTheme();
 </script>
 <template>
-    <div class="dark:bg-slate-900">
+    <div class="dark:bg-slate-900 bg-white">
         <NuxtRouteAnnouncer />
         <!-- <NuxtWelcome /> -->
-        <Modal :prevent-close="false" />
-        <button @click="toggleTheme">Toggle</button>
+        <UButton
+            :icon="enabled ? 'i-heroicons-sun-solid' : 'i-heroicons-moon-solid'"
+            size="lg"
+            :color="enabled ? 'white' : 'black'"
+            :square="false"
+            variant="solid"
+            class="fixed bottom-4 right-4 z-50 shadow-lg"
+            @click="toggleTheme"
+        />
         <Hero />
         <About />
         <Project />

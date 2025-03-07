@@ -3,11 +3,18 @@ const { enabled } = useTheme();
 const projects = [
     {
         title: "EMIS Kemenag 4",
-        description: "Platform Sistem Pendataan Pendidikan Kementrian Agama",
+        description: "Educational Data Collection System Platform",
         image: "/images/EMIS.png",
-        skills: ["React.js", "React Native", "Redux", "Git"],
+        skills: [
+            "React.js",
+            "React Native",
+            "Redux",
+            "Git",
+            "Laravel",
+            "MySQL",
+        ],
         link: "https://emis.kemenag.go.id/",
-        role: "Front-End Developer",
+        role: "Fullstack Developer",
     },
     {
         title: "Ferizy",
@@ -24,12 +31,14 @@ const projects = [
 <template>
     <section id="project">
         <div
-            class="border-b-[1px] dark:border-slate-500 p-2 flex flex-col justify-between mb-8"
+            class="border-b-[1px] dark:border-slate-500 p-2 flex flex-col justify-between mb-8 text-gray-900 dark:text-gray-300"
         >
             <h2 class="text-2xl header">Projects</h2>
-            <p>Projects I've contributed to over the past years</p>
+            <p class="subHeader">
+                Projects I've contributed to over the past years
+            </p>
         </div>
-        <div class="grid grid-cols-1 lg:grid-cols-2 -mx-4 gap-8 p-2">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 p-2">
             <UCard
                 v-for="(project, index) in projects"
                 :key="index"
@@ -50,7 +59,9 @@ const projects = [
                             <div
                                 class="absolute bg-white bottom-2 left-0 w-full h-[2px]"
                             ></div>
-                            <h3 class="text-xl font-bold mb-2">
+                            <h3
+                                class="text-xl font-bold mb-2 text-gray-900 dark:text-gray-300"
+                            >
                                 {{ project.title }}
                             </h3>
                             <svg
@@ -66,15 +77,16 @@ const projects = [
                             </svg>
                         </a>
                     </div>
-                    <div class="text-gray-700 dark:text-gray-300 mb-4">
+                    <div class="text-sm md:text-md">
                         <div class="project">
                             <ul class="gap-2 flex flex-col">
-                                <li>
-                                    <strong>Role:</strong> {{ project.role }}
+                                <li class="text-gray-900 dark:text-gray-300">
+                                    <strong>Role:</strong>
+                                    <p>{{ project.role }}</p>
                                 </li>
-                                <li>
+                                <li class="text-gray-900 dark:text-gray-300">
                                     <strong>Overview:</strong>
-                                    {{ project.description }}
+                                    <p>{{ project.description }}</p>
                                 </li>
                                 <!-- 
                                 <li>
@@ -88,20 +100,22 @@ const projects = [
                                     implement this feature, ensuring it met user
                                     needs and project requirements.
                                 </li> -->
-                                <li>
-                                    <strong>Technologies Used:</strong>
-                                </li>
                             </ul>
                         </div>
                     </div>
-                    <div class="flex flex-wrap gap-2">
-                        <UChip
-                            v-for="(item, index2) in project.skills"
-                            :key="index2"
-                            :show="false"
-                        >
-                            <UButton>{{ item }}</UButton>
-                        </UChip>
+                    <div
+                        class="flex flex-wrap flex-col gap-2 text-sm md:text-md text-gray-900 dark:text-gray-300 my-2"
+                    >
+                        <strong>Technologies Used:</strong>
+                        <div class="flex flex-wrap gap-2">
+                            <UChip
+                                v-for="(item, index2) in project.skills"
+                                :key="index2"
+                                :show="false"
+                            >
+                                <UButton>{{ item }}</UButton>
+                            </UChip>
+                        </div>
                     </div>
                 </div>
             </UCard>

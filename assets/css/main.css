@@ -6,13 +6,17 @@
     @apply transition-colors duration-200;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-    @apply dark:text-white font-bold;
+    @apply dark:text-gray-300 font-bold;
 }
 
 p {
@@ -20,10 +24,10 @@ p {
 }
 
 section,
-nav>div {
+nav > div {
     @apply md:mx-32 mx-4 pb-12 pt-[70px];
 }
 
-nav>div {
+nav > div {
     @apply pt-0;
 }

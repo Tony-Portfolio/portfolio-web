@@ -19,7 +19,7 @@ const skills = [
                     class="bg-white p-6 rounded-lg shadow-lg"
                 >
                     <h3 class="text-xl font-medium mb-2">{{ skill.name }}</h3>
-                    <p class="text-gray-700">{{ skill.level }}</p>
+                    <p class="text-gray-900">{{ skill.level }}</p>
                 </div>
             </div>
         </div>

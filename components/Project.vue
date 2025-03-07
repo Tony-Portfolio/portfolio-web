@@ -4,7 +4,7 @@ const projects = [
     {
         title: "EMIS Kemenag 4",
         description: "Educational Data Collection System Platform",
-        image: "/images/EMIS.png",
+        image: "/images/emis.png",
         skills: [
             "React.js",
             "React Native",
@@ -20,7 +20,7 @@ const projects = [
         title: "Ferizy",
         description:
             "Ferizy is an electronic ticketing system that simplifies booking and managing ferry tickets. It focuses on enhancing user convenience and improving service efficiency.",
-        image: "/images/Ferizy.jpg",
+        image: "/images/ferizy.jpg",
         skills: ["Vue.js", "Nuxt.js", "Pinia", "Git"],
         link: "https://trip.ferizy.com/",
         role: "Front-End Developer",
